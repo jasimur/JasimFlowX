@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1789285655054,
+      "tag": "0000_young_drax",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1789287608235,
+      "tag": "0001_brave_bullseye",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1789287806112,
+      "tag": "0002_vengeful_harpoon",
+      "breakpoints": true
+    }
+  ]
+}

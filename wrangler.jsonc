@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "jasimflow",
+  "main": "./worker.ts",
+  "compatibility_date": "2026-09-13",
+  "compatibility_flags": ["nodejs_compat"],
+  "access": {
+    "dev": {
+      "aud": "jasimflow-local",
+      "identity": { "email": "local@jasimflow.test" }
+    }
+  },
+  "d1_databases": [
+  {
+    "binding": "DB",
+    "database_name": "jasimflow",
+    "database_id": "051db5a1-d93e-40b9-8d47-ee06df2e7aeb",
+    "migrations_dir": "drizzle"
+    }
+  ]
+}

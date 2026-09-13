@@ -1,0 +1,1 @@
+ALTER TABLE `sync_receipts` ADD `entry_updated_at` text DEFAULT '' NOT NULL;

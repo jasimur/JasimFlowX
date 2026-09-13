@@ -1,0 +1,17 @@
+{
+  "id": "/",
+  "name": "JasimFlow",
+  "short_name": "JasimFlow",
+  "description": "আমার আয়, খরচ ও ঋণের ব্যক্তিগত খাতা",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f1e9",
+  "theme_color": "#173b31",
+  "lang": "bn",
+  "icons": [
+    {"src":"/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"/icon-maskable.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ]
+}
