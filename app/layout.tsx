@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import "./pulse-ledger.css";
 
 export const metadata: Metadata = {
   title: "JasimFlow — আমার হিসাব",
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   },
   appleWebApp: {capable:true,title:"JasimFlow",statusBarStyle:"default"},
 };
-export const viewport:Viewport={width:"device-width",initialScale:1,themeColor:"#173b31"};
+export const viewport:Viewport={width:"device-width",initialScale:1,themeColor:"#0a0e16"};
 
 export default function RootLayout({
   children,
