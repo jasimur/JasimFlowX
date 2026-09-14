@@ -1,0 +1,1 @@
+Firebase auth migration work will continue on a dedicated branch before production cutover.
