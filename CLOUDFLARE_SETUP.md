@@ -23,3 +23,29 @@ This branch is the standalone Cloudflare Workers + D1 version of JasimFlow.
 9. Re-open the app and verify the Access login succeeds.
 
 Do not delete the old ChatGPT Sites deployment until the new Worker, D1 data, login, offline sync, Bin and totals have all been verified.
+
+## Preserve dashboard runtime variables
+
+The production Worker is `flow` and the existing D1 is `jasimflow` (binding `DB`).
+`TEAM_DOMAIN` and `POLICY_AUD` must be set in Worker **Settings → Variables and Secrets**,
+not only in Builds environment variables. The verified team domain is
+`https://jasim-access.cloudflareaccess.com`. Use the existing Access application's
+exact **Application Audience (AUD) Tag** for `POLICY_AUD`.
+
+Keep `keep_vars: true` in `wrangler.jsonc`; the build must carry this into
+`dist/server/wrangler.json`. The package deploy script also supplies `--keep-vars`.
+Workers Builds should use:
+
+```text
+Build: pnpm run build
+Deploy: npx wrangler deploy --config dist/server/wrangler.json --keep-vars
+```
+
+`JasimFlow Access configuration is incomplete` means at least one of these two
+runtime values is absent or empty. Preservation does not recover an already
+missing value: restore it in Worker Settings, then select Deploy. Do not change
+the Access application, audience, owner policy or database to fix this error.
+
+Successful build/deploy status alone does not verify application availability.
+After restoring the values, verify that the owner can authenticate and load the
+dashboard. Reference: https://developers.cloudflare.com/workers/wrangler/configuration/#source-of-truth

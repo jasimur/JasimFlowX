@@ -1,6 +1,7 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "flow",
+  "keep_vars": true,
   "main": "./worker.ts",
   "compatibility_date": "2026-09-13",
   "compatibility_flags": ["nodejs_compat"],

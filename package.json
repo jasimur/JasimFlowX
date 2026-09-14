@@ -12,7 +12,7 @@
     "start": "wrangler dev --config dist/server/wrangler.json --local --persist-to .wrangler/state --ip 127.0.0.1 --inspector-port 0",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
-    "deploy": "pnpm run build && wrangler deploy --config dist/server/wrangler.json",
+    "deploy": "pnpm run build && wrangler deploy --config dist/server/wrangler.json --keep-vars",
     "db:migrate:local": "wrangler d1 migrations apply DB --local --config wrangler.jsonc --persist-to .wrangler/state",
     "db:migrate:remote": "wrangler d1 migrations apply DB --remote --config wrangler.jsonc"
   },
