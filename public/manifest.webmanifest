@@ -2,16 +2,31 @@
   "id": "/",
   "name": "JasimFlow",
   "short_name": "JasimFlow",
-  "description": "আমার আয়, খরচ ও ঋণের ব্যক্তিগত খাতা",
+  "description": "My personal ledger for income, expenses and loans",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#0a0e16",
   "theme_color": "#0a0e16",
-  "lang": "bn",
+  "lang": "en",
   "icons": [
-    {"src":"/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
-    {"src":"/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
-    {"src":"/icon-maskable.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }

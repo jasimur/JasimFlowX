@@ -3,8 +3,8 @@ import "./globals.css";
 import "./pulse-ledger.css";
 
 export const metadata: Metadata = {
-  title: "JasimFlow — আমার হিসাব",
-  description: "দৈনন্দিন আয়, খরচ ও ঋণের ব্যক্তিগত হিসাব।",
+  title: "JasimFlow — My ledger",
+  description: "Your personal ledger for income, expenses and loans.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="bn">
+    <html lang="en">
       <head><link rel="manifest" href="/manifest.webmanifest" crossOrigin="use-credentials"/></head>
       <body className="antialiased">{children}</body>
     </html>

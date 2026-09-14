@@ -157,3 +157,51 @@ html[data-quiet=true] .digit-track{transform:translateY(-50%)}html[data-quiet=tr
 @keyframes mark-draw{from{stroke-dashoffset:120;opacity:.3}to{stroke-dashoffset:0;opacity:1}}
 @media(max-width:767px){.hero-balance{font-size:clamp(1rem,calc(145cqw / var(--balance-chars)),2.75rem)}}
 .money-digit,.money-separator{line-height:1.25em}
+
+/* Language controls work offline; native radios retain keyboard navigation. */
+.language-settings{grid-column:1/-1}
+.language-settings h2{display:flex;align-items:center;gap:8px}
+.language-options{display:flex;gap:10px;margin-top:16px;padding:0;border:0}
+.language-options label{display:flex;align-items:center;gap:10px;min-height:44px;padding:10px 18px;background:#152030;border:1px solid #3a4659;border-radius:6px;cursor:pointer;color:#d5deeb}
+.language-options label.selected{border-color:var(--gold);background:#352e20;color:#f4d58b}
+.language-options input{accent-color:var(--gold);width:16px;height:16px}
+.language-options label:focus-within{outline:2px solid var(--gold);outline-offset:3px}
+/* Notes and channel are always visible; only optional dates stay in details. */
+.quick-entry .entry-notes{display:grid;gap:10px;margin:12px 0}
+.quick-entry .entry-notes.with-channel{grid-template-columns:repeat(2,minmax(0,1fr))}
+.quick-entry .entry-notes .field{min-width:0;margin:0}
+.quick-entry .entry-notes label{font-size:.75rem!important;line-height:1.4}
+.quick-entry .entry-notes input{width:100%;min-width:0}
+.quick-entry .category-tile{min-height:48px;padding:7px 5px;gap:4px}
+.quick-entry .category-tile>svg:not(.favorite-indicator){width:15px;height:15px}
+@media(max-width:767px){
+ .quick-entry{padding:14px}
+ .quick-entry .section-heading{padding-bottom:8px;margin-bottom:8px}
+ .quick-entry h2{margin-top:2px;font-size:.95rem}
+ .quick-entry .entry-tabs{margin-bottom:8px;min-height:40px}
+ .quick-entry .amount-input{height:50px;margin-top:4px;padding:4px 10px}
+ .quick-entry .amount-input input{font-size:1.65rem}
+ .quick-entry .amount-shortcuts{gap:6px;margin-top:6px;margin-bottom:10px}
+ .quick-entry .amount-shortcuts button{min-height:40px;padding:5px}
+ .quick-entry .category-grid{gap:6px}
+ .quick-entry .category-tile{min-height:44px;gap:3px;padding:5px 4px}
+ .quick-entry .category-tile>span{font-size:.75rem!important;line-height:1.2}
+ .quick-entry .field-label{margin-bottom:6px}
+ .quick-entry .category-section{margin-bottom:8px}
+ .quick-entry .entry-notes{margin:8px 0;gap:8px}
+ .quick-entry .entry-notes label{font-size:.7rem!important;min-height:2.8em;margin-bottom:3px}
+ .quick-entry .field input{min-height:40px;height:40px;padding:6px 9px;font-size:16px}
+ .quick-entry .account-row{margin:6px 0;padding:6px 0;min-height:44px}
+ .quick-entry .entry-details{margin:6px 0}
+ .quick-entry .entry-details summary{min-height:36px;padding:6px 0}
+ .quick-entry .details-content{padding-top:8px}
+ .quick-entry .save-button{margin-top:8px;min-height:44px}
+ .quick-entry .entry-footnote{margin-top:6px;font-size:.65rem}
+ .entry-dialog:has(.quick-entry){padding:14px!important;gap:8px!important;max-height:calc(100dvh - 16px);overflow-y:auto}
+ .entry-dialog .quick-entry .section-heading{display:none}
+ .entry-dialog:has(.quick-entry) [data-slot=dialog-header]{gap:4px;padding-right:22px}
+ .entry-dialog:has(.quick-entry) [data-slot=dialog-description]{font-size:.75rem;line-height:1.35}
+ .entry-dialog .quick-entry.compact{padding:0}
+}
+
+@media(max-width:767px){.entry-dialog .quick-entry.compact form{margin-top:6px}}
